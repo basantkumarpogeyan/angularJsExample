@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+        <script src="resources/angular.js"></script>
+        <!--<script src="resources/resources.json"></script>-->
+        <script src="resources/script.js"></script>
+    </head>
+    <body>
+    <div class="member" data-ng-app="memberApp">рдкрд░
+        <!--<input type="search" ng-model="sn"/>-->
+        <div class="member-ctrl" data-ng-controller="memberCtrl" style="margin-left: 30%;">
+            <table border="1px">
+                <tr data-ng-repeat="member in records">
+                <td> 
+               {{member.name + ' : ' + member.DOB}}  
+               </td>
+               <td>        
+               <button ng-click="removeMember($index)">Remove -{{$index}}</button>  
+               </td>
+            </tr>
+            </table>
+            
+        </div>
+        
+    </div>
+    </body>
+</html>
